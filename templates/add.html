@@ -1,0 +1,29 @@
+{%extend "base.html"%}
+
+{%block main%}
+<div class="container-fluid">
+    <from action="{{url_for('add')}}" mrthod="post">
+        {{from.csrf token}}
+        <div class="row">
+            <h3> Add Task</h3>
+            <div class="col">
+                {{from.title(class="form-control")}}
+
+            </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        </div>  
+        <div class="row">
+            <h3>Add Desc</h3>
+            <div class="col"> 
+                {{fron.desc(class="form-control")}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {{form.submit(class="btn btn-primary")}}
+            </div>
+        </div>
+
+
+    </from>
+</div>
+{%endblock%}
