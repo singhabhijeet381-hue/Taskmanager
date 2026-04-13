@@ -1,20 +1,20 @@
-{%extend "base.html"%}
+{%extends "base.html"%}
 
 {%block main%}
 <div class="container-fluid">
     <from action="{{url_for('add')}}" mrthod="post">
-        {{from.csrf token}}
+        {{ form.csrf_token }}
         <div class="row">
             <h3> Add Task</h3>
             <div class="col">
-                {{from.title(class="form-control")}}
+                {{form.title(class="form-control")}}
 
             </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
         </div>  
         <div class="row">
             <h3>Add Desc</h3>
             <div class="col"> 
-                {{fron.desc(class="form-control")}}
+                {{form.desc(class="form-control")}}
             </div>
         </div>
         <div class="row">

@@ -82,14 +82,14 @@
             </ul>
         </nav>
         <br>
-        {% with messages = get_flashed messages()%}
+        {% with messages = get_flashed_messages()%}
           {% if messages %}
             {%for message in messages%}
             <div class="alert alert-primary">
                 {{message}}
             </div>
-            {%end for%}
-          {%end if%}
+            {%endfor%}
+          {%endif%}
         {%endwith%}
         <br>
         <h1 class = "animate__animated animate_bounceIn"> Task Manager</h1>
